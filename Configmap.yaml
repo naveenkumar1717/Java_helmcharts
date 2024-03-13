@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: quiz-cm
+  namespace: quiz-app
+data:
+  jdbc_url: "3"
+  user_name: "admin"
+  password: "9112Ntorq"

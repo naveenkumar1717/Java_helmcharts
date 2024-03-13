@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-deployment
+  namespace: quiz-app
+  labels:
+    app: java
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: java
+  template:
+    metadata:
+      labels:
+        app: java
+    spec:
+      containers:
+      - name: java-app
+        image: naveentrodo/quizapp:v1
+        ports:
+        - containerPort: 8080
+        envFrom:
+            - configMapRef:
+                name: quiz-cm
+        resources:
+        Requests:
+          memory: "800Mi"
+          cpu: "500m"  
+        Limits:
+          memory: "1Gi"
+          cpu: "1"      
+strategy:
+   type: RollingUpdate
+   rollingUpdate:
+     maxUnavailable: 1        
