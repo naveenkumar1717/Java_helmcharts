@@ -4,6 +4,6 @@ metadata:
   name: quiz-cm
   namespace: quiz-app
 data:
-  SPRING_DATASOURCE_URL: "jdbc:mysql://database-1.cn6cq8esoozq.us-east-1.rds.amazonaws.com:3306/quizapp"
+  SPRING_DATASOURCE_URL: "jdbc:mysql://test-db.cteuq6ioimzz.us-east-1.rds.amazonaws.com:3306/quizapp"
   SPRING_DATASOURCE_USERNAME: "admin"
   SPRING_DATASOURCE_PASSWORD: "9112Ntorq"
